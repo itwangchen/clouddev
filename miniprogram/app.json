@@ -19,7 +19,7 @@
       "backgroundColor": "#F6F6F6",
       "backgroundTextStyle": "light",
       "navigationBarBackgroundColor": "#d43c33",
-      "navigationBarTitleText": "",
+      "navigationBarTitleText": "音乐",
       "navigationBarTextStyle": "white"
   },
   "tabBar": {

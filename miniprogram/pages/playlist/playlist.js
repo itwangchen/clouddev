@@ -63,7 +63,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
-    // this._getPlaylist()
+    this._getPlaylist()
   },
 
   /**
@@ -72,26 +72,32 @@ Page({
   onShareAppMessage: function() {
 
   },
+  /**
+   * 获取播放列表
+   */
   _getPlaylist() {
     wx.showLoading({
       title: '加载中',
     })
     wx.cloud.callFunction({
-      name: 'getpalylist',
+      name: 'music',
       data: {
         start: this.data.playlist.length,
         count: MAX_LIMIT,
         $url: 'playlist',
       }
     }).then((res) => {
-      console.log(res)
-      // this.setData({
-      //   playlist: this.data.playlist.concat(res.result.data)
-      // })
+      // console.log(res)
+      this.setData({
+        playlist: this.data.playlist.concat(res.result.data)
+      })
       wx.stopPullDownRefresh()
       wx.hideLoading()
     })
   },
+  /**
+   * 获取轮播列表
+   */
   _getSwiper(){
     db.collection('swiper').get().then((res)=>{
       console.log(res);
