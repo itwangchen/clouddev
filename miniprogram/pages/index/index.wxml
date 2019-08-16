@@ -48,5 +48,6 @@
   </view>
   <button bindtap="hadeAdd">test</button>
 
+  <button bindtap="pushmsg">formId</button>
 
 </view>

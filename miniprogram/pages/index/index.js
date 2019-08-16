@@ -35,7 +35,10 @@ Page({
       }
     })
   },
+  /**推送消息 */
+  pushmsg(){
 
+  },
   onGetUserInfo: function (e) {
     if (!this.logged && e.detail.userInfo) {
       this.setData({
