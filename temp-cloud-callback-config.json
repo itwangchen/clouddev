@@ -1,0 +1,10 @@
+{
+  "endable":true,
+  "callbacks":[
+    {
+      "magType":1,
+      "env":"fl-3f6d62",
+      "functionName":"sendMessage"
+    }
+  ]
+}
